@@ -20,24 +20,24 @@ Il néccesite donc exactement les mêmes modules pour fonctionner.
 
 ### Connexion au compte Pronote
 
-`
+```python
 import pronotepy
 import PronotePyEasy
 
-etab = 'https://demo.index-education.net/pronote/eleve.html'
+etab = "https://demo.index-education.net/pronote/eleve.html"
 client = pronotepy.Client(etab,
                           username='demonstration',
                           password='pronotevs')
-`
+```
 
 Cette étape est la même que sur PronotePy, en cas de problème à cette étape, ou pour plus d'option :
 s'en référer au module pronotepy
 
 ### Initialisation de PronotePyEasy
 
-`
+```python
 eleve = PronotePyEasy.Student(client)
-`
+```
 
 `eleve` devient dès lors l'objet afin d'appeler les fontions du module (voir suite pour comprendre)
 
@@ -45,9 +45,9 @@ eleve = PronotePyEasy.Student(client)
 
 ### Obtenir les devoirs
 
-`
+```python
 print(eleve.next_homework())
-`
+```
 
 Pour obtenir le prochain devoir de l'èlève.
 Renvoie une list avec :
@@ -56,27 +56,27 @@ Renvoie une list avec :
 - La date pour laquel il faut rendre le devoir (date)
 - Si le devoir a été fait (bool)
 
-`
+```python
 print(eleve.homework())  # Renvoie tous les prochains devoir
 print(eleve.homework(3))  # Renvoie les 3 prochains devoir (dans la limites des prochains devoirs)
-`
+```
 
 Idem que `next_homework()` mais renvoie tous les devoirs, ou le nombre données en argument *optionnel*.
 Renvoie sous la même forme.
 
 ### Obtenir la moyenne
 
-`
+```python
 print(eleve.average())
-`
+```
 
 Renvoie la moyenne général sous forme d'un float
 
 ### Obtenir les infos et sondages
 
-`
+```python
 print(eleve.informations_polls(83))  # Renvoie les 83 dernières informations/sondages (dans la limites des infos etc...)
-`
+```
 
 Renvoie la listes des informations et sondages publiés, ou le nombre données en argument *optionnel*.
 Renvoie une list contenant une list par infos/sondages sous forme:
@@ -84,9 +84,9 @@ Renvoie une list contenant une list par infos/sondages sous forme:
 
 ### Obtenir les absences
 
-`
+```python
 print(eleve.absences())
-`
+```
 
 Renvoie la listes des absence enregistré, ou le nombre données en argument *optionnel*.
 Renvoie une list contenant une list par absence sous forme:
