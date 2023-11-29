@@ -92,6 +92,16 @@ Renvoie la listes des absence enregistré, ou le nombre données en argument *op
 Renvoie une list contenant une list par absence sous forme:
 `[Nombre d'heure (str)/ Raison (list[str])/ Justifié(bool)]`
 
+### Obtenir les absences
+
+```python
+print(eleve.grades())
+```
+
+Renvoie la listes des notes enregistré, ou le nombre données en argument *optionnel*.
+Renvoie une list contenant une list par note sous forme:
+`[Note (str)/ Sur combien est la note (str)/ Matière (str)]`
+
 > [!WARNING]
 > En cas d'abus du modules vous risquez les mêmes choses que précise le module PronotePy
 

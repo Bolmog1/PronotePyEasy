@@ -14,3 +14,4 @@ print(eleve.homework(3))  # Renvoie les 3 prochains devoir (dans la limites des 
 print(eleve.average())  # Renvoie la moyenne général
 print(eleve.informations_polls(83))  # Renvoie les 83 dernières informations/sondages (dans la limites des infos etc...)
 print(eleve.absences())  # Renvoie toutes les dernières absences
+print(eleve.grades())  # Renvoie toutes les dernières notes

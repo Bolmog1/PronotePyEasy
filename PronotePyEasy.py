@@ -54,3 +54,12 @@ class Student:
             x = len(absences)
         result = absences[:x]
         return [[a.hours, a.reasons, a.justified] for a in result]
+
+    def grades(self, x: int = None):
+        list_notes = self.client.current_period.grades
+        if x is None:  # Garde fou, évite les erreurs.
+            x = len(list_notes)
+        elif type(x) is not None and x > len(list_notes):
+            x = len(list_notes)
+        list_notes = list_notes[:x]
+        return [[note.grade, note.out_of, note.coefficient, note.subject.name] for note in list_notes]
