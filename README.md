@@ -107,4 +107,4 @@ Renvoie une list contenant une list par note sous forme:
 
 ## License
 
-Aucunes car je sais pas comment ça fonctionne (yet)
+Créative Commons : CC-BY-NC
